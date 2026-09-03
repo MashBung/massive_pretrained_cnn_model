@@ -8,3 +8,6 @@ torchvision의 pretrained weight를 가져다 쓰는 대신, 백본 구조 설�
 <img width="570" height="379" alt="cnn_log1" src="https://github.com/user-attachments/assets/e665fa95-2b8f-43f2-b488-dbebdd0390d8" />
 <img width="491" height="329" alt="cnn_log2" src="https://github.com/user-attachments/assets/48b45407-1d58-446c-baf7-c2adc937b1d3" />
 <img width="197" height="149" alt="cnn_result" src="https://github.com/user-attachments/assets/8f1d34c8-ba6a-4758-b7e9-2db3d1e5e447" />
+
+입력 데이터
+<img width="680" height="465" alt="horse" src="https://github.com/user-attachments/assets/0cdae5cc-7544-4d23-acd9-5783f5d1dec1" />
