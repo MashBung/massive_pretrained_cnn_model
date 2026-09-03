@@ -9,5 +9,10 @@ torchvision의 pretrained weight를 가져다 쓰는 대신, 백본 구조 설�
 <img width="491" height="329" alt="cnn_log2" src="https://github.com/user-attachments/assets/48b45407-1d58-446c-baf7-c2adc937b1d3" />
 <img width="197" height="149" alt="cnn_result" src="https://github.com/user-attachments/assets/8f1d34c8-ba6a-4758-b7e9-2db3d1e5e447" />
 
-입력 데이터
-<img width="680" height="465" alt="horse" src="https://github.com/user-attachments/assets/0cdae5cc-7544-4d23-acd9-5783f5d1dec1" />
+핵심결과
+
+훈련 정확도 85.37
+검증 정확도 68.05
+클래스 수 500
+입력 해상도 320*320
+학습 환경 5070ti
