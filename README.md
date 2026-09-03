@@ -24,3 +24,5 @@ torchvision의 pretrained weight를 가져다 쓰는 대신, 백본 구조 설�
 입력 해상도 320*320
 
 학습 환경 5070ti
+
+
