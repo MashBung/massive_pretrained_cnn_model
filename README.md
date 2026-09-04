@@ -125,8 +125,8 @@ class GPUTrainTransform(nn.Module):
 
 ## 평가
 
-- `test.py` — Top-1 / Top-5 정확도 및 **500개 클래스별 정확도**를 계산해 `log/per_class_acc.txt`에 저장 (가장 못 맞추는 클래스 순으로 정렬). 어떤 클래스가 혼동되는지 분석하는 데 사용.
-- `image_test.py` — 단일 이미지 추론, Top-5 확률 출력.
+- `test.py` — Top-1 / Top-5 정확도 및 **500개 클래스별 정확도**를 계산해 `log/per_class_acc.txt`에 저장 (가장 못 맞추는 클래스 순으로 정렬). 어떤 클래스가 혼동되는지 분석하는 데 사용합니다.
+- `image_test.py` — 단일 이미지 추론, Top-5 확률 출력합니다.
 
 ## 다운스트림 활용: 탐지기 백본으로 사용
 
