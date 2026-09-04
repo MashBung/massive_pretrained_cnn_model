@@ -123,9 +123,6 @@ class GPUTrainTransform(nn.Module):
 대응: label smoothing, weight decay 상향, Dropout, 증강 강도 조절.
 한계: 데이터 규모(클래스당 ~550장)가 근본 원인으로, 최종 val ~68%에서 수렴.
 
-**3. 학습 재개 로직 버그**
-epoch 루프 중복, 체크포인트 저장 경로 오류, state_dict 키 오타 등을 수정하며 재개 로직을 안정화.
-
 ## 평가
 
 - `test.py` — Top-1 / Top-5 정확도 및 **500개 클래스별 정확도**를 계산해 `log/per_class_acc.txt`에 저장 (가장 못 맞추는 클래스 순으로 정렬). 어떤 클래스가 혼동되는지 분석하는 데 사용.
