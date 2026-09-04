@@ -161,9 +161,12 @@ c5 = model.stage5(c4)
 
 <img width="748" height="557" alt="cnn_result3" src="https://github.com/user-attachments/assets/f241719e-6724-451e-b6ff-ac550ecc3755" />
 
+**예측 1은 사전학습 모델에서 말 클래스 사용되었기때문에 당연히 제일 높은 점수를 받으면 예측합니다.**
+**예측 2는 예측 3과 다르게 말의 색깔을 우선적으로 더 중요하게 여겨 두번째로 높은 점수를 받습니다.**
+**예측 3은 예측이 2와 공통으로 4발달린 짐승과 유사한 다리가 길고 흉통쪽이 넓으면 앞으로 쭉 내민 목과 앞뒤로 긴 머리를 판단한거로 보아 외형으로 판단하여 3번째 점수를 받습니다.**
+
+**즉 CNN은 색깔, 선, 형태, 경계등을 학습하여 조건이 가장 많고 비슷한 객체를 더 높이 채첨하는 방식이란걸 유추할 수 있습니다**
 
 ## 다음 단계
 
-- Forward에서 C3/C4/C5를 직접 반환하는 `features()` 메서드 추가
-- 더 강한 정규화(Mixup / CutMix, Stochastic Depth) 실험
-- FCOS 탐지기와 연결한 end-to-end 결과
+- backbone Forward에서 C3/C4/C5 학습과정에서 얻은 특징맵을 활용하여 object detection에 사용됩니다. 
