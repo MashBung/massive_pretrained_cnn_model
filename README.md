@@ -63,7 +63,7 @@ Input 3×320×320
 
 ### 데이터셋
 
-- 500 클래스, 약 275K train / 31K val / 31K test
+- 500 클래스, 약 270K train / 30K val / 30K test
 - `split_image.py`: 클래스별 8:1:1 분할(seed 고정), 320×320 리사이즈 후 PNG로 사전 저장
 - `extension_convert.py`: jpg/bmp/webp 혼재 → PNG 통일
 - 정규화 mean/std는 학습 데이터에서 직접 계산: `mean=[0.4484, 0.4371, 0.3758]`, `std=[0.2749, 0.2660, 0.2726]`
