@@ -101,7 +101,7 @@ class GPUTrainTransform(nn.Module):
 
 | 항목 | 설정 |
 |---|---|
-| Optimizer | AdamW (lr=1e-3, weight_decay=0.02) |
+| Optimizer | AdamW (model.parameters(), lr=0.001, betas=(0.9,0.999), eps=1e-8, weight_decay=0.02 |
 | Scheduler | CosineAnnealingLR (T_max=150, eta_min=1e-6) |
 | Loss | CrossEntropyLoss (label_smoothing=0.1) |
 | Precision | AMP (fp16 autocast + GradScaler) |
