@@ -106,7 +106,6 @@ class GPUTrainTransform(nn.Module):
 | Loss | CrossEntropyLoss (weight=None, ignore_index=-100, reduction="mean", label_smoothing=0.1,) |
 | Precision | AMP (fp16 autocast + GradScaler) |
 | Batch size | 256 |
-| Regularization | Dropout 0.3, label smoothing, weight decay, RandomResizedCrop / ColorJitter / Rotation |
 
 ### 체크포인트 전략
 
