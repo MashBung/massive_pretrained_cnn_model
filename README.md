@@ -69,7 +69,6 @@ Input 3×320×320
 - 정규화 mean/std는 학습 데이터에서 직접 계산: `mean=[0.4484, 0.4371, 0.3758]`, `std=[0.2749, 0.2660, 0.2726]`
 
 ### GPU 증강으로 CPU 병목 해결
-<img width="197" height="149" alt="cnn_result" src="https://github.com/user-attachments/assets/7d9a75bd-909b-4c9c-81ee-e490370d2328" />
 
 `transform.py`
 
