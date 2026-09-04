@@ -72,7 +72,7 @@ Input 3×320×320
 
 `transform.py`
 
-초기에는 torchvision transform으로 CPU에서 증강을 수행했는데, **DataLoader가 GPU 처리 속도를 따라가지 못해 GPU 활용률이 낮게 유지**되는 문제가 있었습니다.
+torchvision transform는 배치내 처리를 각각 수행하지 못하고 **DataLoader가 GPU 처리 속도를 따라가지 못해 GPU 활용률이 낮게 유지**되는 문제가 있었습니다.
 
 해결책으로 **CPU에서는 PIL → uint8 텐서 변환만 수행하고, 증강·정규화 전체를 Kornia로 GPU에서 배치 단위로 처리**하도록 파이프라인을 재구성했습니다.
 
