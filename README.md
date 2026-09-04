@@ -69,6 +69,7 @@ Input 3×320×320
 - 정규화 mean/std는 학습 데이터에서 직접 계산: `mean=[0.4484, 0.4371, 0.3758]`, `std=[0.2749, 0.2660, 0.2726]`
 
 ### GPU 증강으로 CPU 병목 해결
+<img width="197" height="149" alt="cnn_result" src="https://github.com/user-attachments/assets/7d9a75bd-909b-4c9c-81ee-e490370d2328" />
 
 `transform.py`
 
@@ -145,19 +146,22 @@ c4 = model.stage4(c3)
 c5 = model.stage5(c4)
 ```
 
-## 프로젝트 구조
+## CNN이 무엇을 학습하는지 유추
 
-```
-.
-├── backbone.py          # CNN 백본 정의 (ResidualBlock, cnn)
-├── transform.py         # CPU/GPU transform (Kornia 증강)
-├── train.py             # 학습 엔트리포인트, 체크포인트 재개
-├── train_val_code.py    # train / val 루프 (AMP)
-├── test.py              # Top-1/Top-5, 클래스별 정확도 평가
-├── image_test.py        # 단일 이미지 추론
-├── split_image.py       # 데이터 분할 + 리사이즈 전처리
-└── extension_convert.py # 이미지 확장자 통일
-```
+<img width="197" height="149" alt="cnn_result" src="https://github.com/user-attachments/assets/fb69befb-4fba-446c-bd84-a49cb6abfd05" />
+
+예측 1
+
+<img width="731" height="546" alt="cnn_result1" src="https://github.com/user-attachments/assets/c3e17b44-1061-449e-827e-83572a808c65" />
+
+예측 2 
+
+<img width="764" height="557" alt="cnn_result2" src="https://github.com/user-attachments/assets/eb6e548d-75e5-4bcb-8b3f-2b4e7c9d4ce6" />
+
+예측 3
+
+<img width="748" height="557" alt="cnn_result3" src="https://github.com/user-attachments/assets/f241719e-6724-451e-b6ff-ac550ecc3755" />
+
 
 ## 다음 단계
 
