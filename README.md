@@ -169,4 +169,4 @@ c5 = model.stage5(c4)
 
 ## 다음 단계
 
-- backbone Forward에서 C3/C4/C5 학습과정에서 얻은 특징맵을 활용하여 object detection에 사용됩니다. 
+- backbone Forward에서 C3/C4/C5 학습과정에서 얻은 특징맵과 약 30만장 대규모 사전학습 모델을 활용하여 object detection에 사용됩니다. 
