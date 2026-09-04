@@ -130,7 +130,7 @@ class GPUTrainTransform(nn.Module):
 
 ## 다운스트림 활용: 탐지기 백본으로 사용
 
-이 모델은 이후 **FCOS 객체 탐지기**의 백본으로 사용됩니다. 분류 head를 제거하고 Stage3/4/5 출력을 FPN에 연결합니다.
+이 모델은 이후 **객체 탐지기**의 백본으로 사용됩니다. 분류 head를 제거하고 Stage3/4/5 출력을 객체탐지에 연결합니다.
 
 ```python
 model = cnn(num_classes=500)
@@ -157,23 +157,6 @@ c5 = model.stage5(c4)
 ├── image_test.py        # 단일 이미지 추론
 ├── split_image.py       # 데이터 분할 + 리사이즈 전처리
 └── extension_convert.py # 이미지 확장자 통일
-```
-
-## 실행
-
-```bash
-pip install torch torchvision kornia pillow
-
-# 1. 데이터 전처리 (경로 수정 후)
-python extension_convert.py
-python split_image.py
-
-# 2. 학습
-python train.py
-
-# 3. 평가
-python test.py
-python image_test.py
 ```
 
 ## 다음 단계
