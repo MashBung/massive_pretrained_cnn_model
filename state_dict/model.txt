@@ -1,0 +1,1 @@
+https://huggingface.co/ACPUPoli/pretrained_cnn_model/resolve/main/pretrained_cnn_23.pth
