@@ -28,11 +28,14 @@ Input
 
 ```
 Input
-└─ pipe_x     Conv → BN or nn.Identity()(Input 그대로 넘김)
+└─ pipe_x     Conv → BN   (채널과 stride가 다를겨우)
+└─ pipe_x     nn.Identity ()(변화가 없을경우 Input 그대로 넘김) 
 └─ out        Conv → BN → SiLU
 └─ out        Conv → BN
 └─ return     pipe_x + out → SiLU 
 ```
+
+- 층이 깊어질수록 gradient가 곱셈 누적으로 소실되어, 초기 층이 학습의 영향을 받지 못한다. 이전 특징맵을 합쳐서 기울기 소실을 막습니다.
 
 ## 설계 결정과 이유
 
